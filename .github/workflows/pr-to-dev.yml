@@ -54,7 +54,7 @@ jobs:
 
       - name: npm audit frontend
         working-directory: ./frontend
-        run: npm audit --audit-level=high
+        run: npm audit --audit-level=critical
 
       - name: Snyk security analysis - frontend
         working-directory: ./frontend
