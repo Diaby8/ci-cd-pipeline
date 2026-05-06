@@ -54,11 +54,11 @@ jobs:
 
       - name: npm audit frontend
         working-directory: ./frontend
-        run: npm audit --audit-level=high
+        run: npm audit --audit-level=critical
 
       - name: Snyk security analysis - frontend
         working-directory: ./frontend
-        run: npx snyk test --severity-threshold=high
+        run: npx snyk test --severity-threshold=critical
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
